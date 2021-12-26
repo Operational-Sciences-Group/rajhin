@@ -1,0 +1,15 @@
+#!/bin/bash
+#OSG -> RAJHIN
+#    ______      ____    ____        ____   ____            ____           ____  ____  
+#  >   /  /___/ /___    /___/ /   / /___/  /___/  / / \  / / __    /    / /___/ /___/ <
+# >   /  /   / /___    /     /___/ /   \  /   \  / /   \/ /___/   /__  / /   / /   \ <
+d1=$(tr -dc 'A-F0-9' < /dev/urandom | head -c2)
+d2=$(tr -dc 'A-F0-9' < /dev/urandom | head -c2)
+d3=$(tr -dc 'A-F0-9' < /dev/urandom | head -c2)
+interfaces=($(basename -a /sys/class/net/* | grep -v lo))
+for i in "${interfaces[@]}"
+do
+	ifconfig "$i" down
+	ifconfig "$i" hw ether 00:e0:4c:"$d1":"$d2":"$d3"
+	ifconfig "$i" up
+done
