@@ -9,7 +9,7 @@
 ## Table of contents
 
 1. About
-2. Installation /usage
+2. Installation / Usage
 3. Disclaimer / Warning
 4. License
 
