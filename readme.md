@@ -51,4 +51,4 @@ All the contents of this repository should be used for authorized and/or educati
 
 ## License
 
-[GPL-3.0 License](https://github.com/JoustingZebra/Project-Birddog/blob/main/LICENSE)
+[GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.html)
