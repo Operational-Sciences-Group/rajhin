@@ -27,7 +27,7 @@ Rajhin can be executed manually like other bash scripts when a physical address 
 
 Two example methods to install rajhin to execute at start up are:
 
-# Using crontab:
+## Using crontab:
 
 @ terminal
 
@@ -35,7 +35,7 @@ Two example methods to install rajhin to execute at start up are:
 
 ``` @reboot sh /path/to/rajhin.sh ```
 
-# Using rc.local:
+## Using rc.local:
 
 Append to rc.local file (directory varies on distribution):
 
