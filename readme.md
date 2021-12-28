@@ -4,7 +4,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Operational-Sciences-Group/rajhin?style=plastic)
 
 *"Do you expect a truthful answer?  What kind of trickster do you take this one for?"*
-## Rajhin - The Purring Liar
+## *Rajhin - The Purring Liar*
 
 ## Table of contents
 
@@ -15,17 +15,17 @@
 
 ## About
 
-Rahjin is a bash script for automatically spoofing the MAC address of all external ethernet interfaces on linux systems.  
-The intended use case to configure the rahjin script to execute at system startup, however the script can be executed manually via typical script execution methods when physical address reset is desired.
-Rahjin will detect all active interfaces (eth0, wlan0, wlan1, etc...) and filter out the loopback address (lo) for spoofing.
+Rajhin is a bash script for automatically spoofing the MAC address of all external ethernet interfaces on linux systems.  
+The intended use case to configure the rajhin script to execute at system startup, however the script can be executed manually via typical script execution methods when physical address reset is desired.
+Rajhin will detect all active interfaces (eth0, wlan0, wlan1, etc.) and filter out the loopback address (lo) for spoofing.
 Spoofing is comprised of randomizing the three hexadecimal octets that comprise the NIC specific address, and appending them to the OUI address for Realtek ethernet drivers.
 The idea is that a recognizable though vague OUI used in a wide range of devices provides a less suspicious address than a purely random one.
 
 ## Installation / Usage
 
-Rahjin can be executed manually like other bash scripts when a physical address identity refresh is desired.  However, the intended use case is to execute Rahjin automatically at system start up.
+Rajhin can be executed manually like other bash scripts when a physical address identity refresh is desired.  However, the intended use case is to execute rajhin automatically at system start up.
 
-Two example methods to install rahjin to execute at start up are:
+Two example methods to install rajhin to execute at start up are:
 
 # Using crontab:
 
@@ -33,13 +33,13 @@ Two example methods to install rahjin to execute at start up are:
 
 ``` crontab -e ```
 
-``` @reboot sh /path/to/rahjin.sh ```
+``` @reboot sh /path/to/rajhin.sh ```
 
 # Using rc.local:
 
 Append to rc.local file (directory varies on distribution):
 
-``` sh /path/to/rahjin.sh ```
+``` sh /path/to/rajhin.sh ```
 
 Ensure rc.local itself is an executable with:
 
