@@ -29,12 +29,10 @@ SecretKey=$(uuidgen | sed "s/-//g; s/..../:&/g; s/^://")
 # This decouples the last three fields of the IPv6 StateLess Address Auto-Config (SLAAC) from the EUI-48 on default net adapters. 
 sysctl -w net.ipv6.conf.default.use_tempaddr=2
 
-
 # Enable RFC 7217 (AKA "Semantically Opaque Interface Identifiers")
 # This makes the IPv6 SLAAC from an opaque hash.
 # This address is still "static" per network.
 # Yes, it changes every time you run the script.
-
 sysctl -w net.ipv6.conf.default.stable_secret="$SecretKey"
 
 interfaces=($(find /sys/class/net/* | grep -v "lo" | cut -d'/' -f5))
@@ -49,4 +47,3 @@ do
 		echo New EUI-48 for "$i" = "$OUI":"$(RandHex)":"$(RandHex)":"$(RandHex)"
 	fi
 done
-
