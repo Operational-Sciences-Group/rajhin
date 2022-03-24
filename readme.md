@@ -3,7 +3,7 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/Operational-Sciences-Group/rajhin?logo=Github&style=plastic)
 ![GitHub top language](https://img.shields.io/github/languages/top/Operational-Sciences-Group/rajhin?logo=Bash&style=plastic)
-![Version](https://img.shields.io/badge/Version-1.0-sucess?style=plastic)
+![Version](https://img.shields.io/badge/Version-1.1-sucess?style=plastic)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Operational-Sciences-Group/rajhin?style=plastic)
 
 ## Table of contents
