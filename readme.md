@@ -3,7 +3,7 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/Operational-Sciences-Group/rajhin?logo=Github&style=plastic)
 ![GitHub top language](https://img.shields.io/github/languages/top/Operational-Sciences-Group/rajhin?logo=Bash&style=plastic)
-![Version](https://img.shields.io/badge/Version-1.1-sucess?style=plastic)
+![Version](https://img.shields.io/badge/Version-1.2-sucess?style=plastic)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Operational-Sciences-Group/rajhin?style=plastic)
 
 ## Table of contents
@@ -20,6 +20,7 @@ The intended use case to configure the rajhin script to execute at system startu
 Rajhin will detect all active interfaces (eth0, wlan0, wlan1, etc.) and filter out the loopback address (lo) for spoofing.
 Spoofing is comprised of randomizing the three hexadecimal octets that comprise the NIC specific address, and appending them to the OUI address for common vendors.
 The idea is that a recognizable though vague OUI (Organizationally Unique Identifier) used in a wide range of devices provides a less suspicious address than a purely random one.
+It also dynamically assigns pseudorandom hostnames using the template "DESKTOP-XXXXXX" or "LAPTOP-XXXXXX" where "X" is an integer. No reboot required
 
 ## Installation / Usage
 
