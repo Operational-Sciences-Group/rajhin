@@ -7,7 +7,6 @@
 
 sudo echo "Executing Rajhin"
 
-
 if [[ $UID == 0 ]]; then
 
         function RandHex(){
@@ -25,7 +24,6 @@ if [[ $UID == 0 ]]; then
                 apt-get install uuid-runtime
                 echo -e "\n"
         fi
-
 
         # pick random hostname
         DesktopHost=("DESKTOP-$(RandInt)$(RandInt)$(RandInt)$(RandInt)$(RandInt)$(RandInt)")
@@ -52,7 +50,6 @@ if [[ $UID == 0 ]]; then
         SecretKey=$(uuidgen | sed "s/-//g; s/..../:&/g; s/^://")
         sysctl -w net.ipv6.conf.default.stable_secret="$SecretKey"
 
-	
         # Add list of vendors
         declare -a OUIarray=(00:50:E4 00:56:CD 10:A5:1D 00:e0:4c)
         OUI=$(shuf -n1 -e "${OUIarray[@]}")
@@ -63,13 +60,13 @@ if [[ $UID == 0 ]]; then
                 # of the interface is up
                 AdapterStatus=$(cat /sys/class/net/"$i"/operstate)
                 if [[ $AdapterStatus == "up" ]]; then
+			NewMAC="$OUI":"$(RandHex):"$(RandHex):"$(RandHex)"
                         ifconfig "$i" down
-                        ifconfig "$i" hw ether "$OUI":"$(RandHex)":"$(RandHex)":"$(RandHex)"
+                        ifconfig "$i" hw ether "$NewMAC"
                         ifconfig "$i" up
-                        echo New EUI-48 for "$i" = "$OUI":"$(RandHex)":"$(RandHex)":"$(RandHex)"
+                        echo New EUI-48 for "$i" = "$NewMAC"
                 fi
         done
-
 
 else
     echo "Please run this script with sudo:"
